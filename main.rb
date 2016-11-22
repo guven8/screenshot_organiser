@@ -21,7 +21,7 @@ screenshots_by_date.each do |date, files|
     Dir.mkdir date_folder
   end
   files.each do |file|
-    FileUtils.mv("#{@desktop_path}/#{file}", "#{@screenshots_folder}/#{date}")
-    puts "Moving #{file} to #{@screenshots_folder}/#{date}"
+    FileUtils.mv("#{@desktop_path}/#{file}", date_folder)
+    puts "Moving #{file} to #{date_folder}"
   end
 end
